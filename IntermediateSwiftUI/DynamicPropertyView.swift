@@ -36,13 +36,12 @@ import SwiftUI
 	init(_ filename: String) {
 		let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
 		url = paths[0].appendingPathComponent(filename)
-		
 		let initialText = (try? String(contentsOf: url)) ?? ""
 		_value = State(wrappedValue: initialText)
 	}
 }
 
-struct ExampleView8: View {
+struct DynamicPropertyView: View {
 	@Document("Test.txt") var document
 	var body: some View {
 		NavigationStack {
@@ -65,8 +64,8 @@ struct ExampleView8: View {
 	}
 }
 
-struct ExampleView8_Previews: PreviewProvider {
+struct DynamicPropertyView_Previews: PreviewProvider {
     static var previews: some View {
-        ExampleView8()
+		DynamicPropertyView()
     }
 }

@@ -25,7 +25,7 @@ struct CheckToggleStyle: ToggleStyle {
 	}
 }
 
-struct ExampleView9: View {
+struct ToggleStyleView: View {
 	@State private var showAdvanced = false
     var body: some View {
         Toggle("Show advanded options", isOn: $showAdvanced)
@@ -33,8 +33,8 @@ struct ExampleView9: View {
     }
 }
 
-struct ExampleView9_Previews: PreviewProvider {
+struct ToggleStyleView_Previews: PreviewProvider {
     static var previews: some View {
-        ExampleView9()
+		ToggleStyleView()
     }
 }
